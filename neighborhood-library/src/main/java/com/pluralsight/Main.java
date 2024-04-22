@@ -10,9 +10,9 @@ public class Main {
 
     public static void displayMainMenu() {
         String[] menuOptions = {
-                "1 - Show Available Books",
-                "2 - Show Checked Out Books",
-                "3 - Exit (Close Software)"
+                "1  Show Available Books",
+                "2  Show Checked Out Books",
+                "3  Exit "
         };
 
         int maxLength = 0;
@@ -20,11 +20,11 @@ public class Main {
             maxLength = Math.max(maxLength, option.length());
         }
         int boxWidth = maxLength + 4;
-        String horizontalLine = "+" + "-".repeat(boxWidth) + "+";
+        String horizontalLine = " " + "-".repeat(boxWidth) + " ";
 
         System.out.println(horizontalLine);
         for (String option : menuOptions) {
-            String paddedOption = "| " + option + " ".repeat(boxWidth - option.length() - 3) + "|";
+            String paddedOption = " " + option + " ".repeat(boxWidth - option.length() - 3) + " ";
             System.out.println(paddedOption);
         }
         System.out.println(horizontalLine);
