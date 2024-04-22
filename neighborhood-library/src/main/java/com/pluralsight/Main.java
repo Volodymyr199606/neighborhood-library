@@ -8,12 +8,16 @@ public class Main {
     static int bookCount = 0;
     static final Book[] books = new Book[MAX_BOOKS];
 
+    // Method to display the main menu
+
     public static void displayMainMenu() {
         String[] menuOptions = {
                 "1  Show Available Books",
                 "2  Show Checked Out Books",
                 "3  Exit "
         };
+
+        // Calculating the maximum length of menu options to format the menu
 
         int maxLength = 0;
         for (String option : menuOptions) {
@@ -22,6 +26,7 @@ public class Main {
         int boxWidth = maxLength + 4;
         String horizontalLine = " " + "-".repeat(boxWidth) + " ";
 
+        // Printing the menu with proper formatting
         System.out.println(horizontalLine);
         for (String option : menuOptions) {
             String paddedOption = " " + option + " ".repeat(boxWidth - option.length() - 3) + " ";
@@ -31,7 +36,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        preloadBooks();
+        preloadBooks(); // Preload some books into the library
 
         int choice;
         do {
@@ -39,6 +44,8 @@ public class Main {
             displayMainMenu();
             System.out.print("Enter your command here: ");
             choice = Integer.parseInt(scanner.nextLine());
+
+            // Managing user selection
 
             switch (choice) {
                 case 1:
@@ -56,6 +63,8 @@ public class Main {
             }
         } while (choice != 3);
     }
+
+    // Method to preload some books into the library
 
     public static void preloadBooks() {
         books[0] = new Book(1, "6789998212", "The Lightning Thief");
@@ -81,6 +90,8 @@ public class Main {
         bookCount = 20;
     }
 
+    // Method to display available books
+
     public static void showAvailableBooks() {
         System.out.println("The available books are listed here:");
         for (int i = 0; i < bookCount; i++) {
@@ -104,6 +115,8 @@ public class Main {
             System.out.println("The selection made is invalid. You'll be redirected back to the homepage...");
         }
     }
+
+    // Method to display checked out books
 
     public static void showCheckedOutBooks() {
         System.out.println("Here are the checked out books:");
@@ -131,6 +144,8 @@ public class Main {
                 break;
         }
     }
+
+    // Method to check in a book
 
     public static void checkInBook() {
         System.out.print("Please input the identification number of the book you wish to return: ");
