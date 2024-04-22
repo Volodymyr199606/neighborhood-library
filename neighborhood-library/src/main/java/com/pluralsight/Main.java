@@ -12,27 +12,15 @@ public class Main {
 
     public static void displayMainMenu() {
         String[] menuOptions = {
-                "1  Show Available Books",
-                "2  Show Checked Out Books",
-                "3  Exit "
+                "I. Show Available Books",
+                "II. Show Checked Out Books",
+                "III. Exit "
         };
 
-        // Calculating the maximum length of menu options to format the menu
-
-        int maxLength = 0;
+        // Print the menu
         for (String option : menuOptions) {
-            maxLength = Math.max(maxLength, option.length());
+            System.out.println(option);
         }
-        int boxWidth = maxLength + 4;
-        String horizontalLine = " " + "-".repeat(boxWidth) + " ";
-
-        // Printing the menu with proper formatting
-        System.out.println(horizontalLine);
-        for (String option : menuOptions) {
-            String paddedOption = " " + option + " ".repeat(boxWidth - option.length() - 3) + " ";
-            System.out.println(paddedOption);
-        }
-        System.out.println(horizontalLine);
     }
 
     public static void main(String[] args) {
@@ -40,7 +28,7 @@ public class Main {
 
         int choice;
         do {
-            System.out.println("\nWelcome to the local library in your neighborhood!");
+            System.out.println("\nHello and welcome to the local library in your neighborhood!");
             displayMainMenu();
             System.out.print("Enter your command here: ");
             choice = Integer.parseInt(scanner.nextLine());
@@ -67,26 +55,26 @@ public class Main {
     // Method to preload some books into the library
 
     public static void preloadBooks() {
-        books[0] = new Book(1, "6789998212", "The Lightning Thief");
-        books[1] = new Book(2, "6789998213", "The Sea Of Monsters");
-        books[2] = new Book(3, "6789998214", "The Titan's Curse");
-        books[3] = new Book(4, "6789998215", "The Battle of the Labyrinth");
-        books[4] = new Book(5, "6789998216", "The Last Olympian");
-        books[5] = new Book(6, "6789998217", "The Chalice of the Gods");
-        books[6] = new Book(7, "6789998218", "Twilight");
-        books[7] = new Book(8, "6789998219", "New Moon");
-        books[8] = new Book(9, "6789998220", "Breaking Dawn");
-        books[9] = new Book(10, "6789998221", "Eclipse");
-        books[10] = new Book(11, "6789998222", "The Sorcerer's Stone");
-        books[11] = new Book(12, "6789998223", "The Chamber of Secrets");
-        books[12] = new Book(13, "6789998224", "The Prisoner of Azkaban");
-        books[13] = new Book(14, "6789998225", "The Goblet of Fire");
-        books[14] = new Book(15, "6789998226", "The Order of the Phoenix");
-        books[15] = new Book(16, "6789998227", "The Half-Blood Prince");
-        books[16] = new Book(17, "6789998228", "The Deathly Hallows");
-        books[17] = new Book(18, "6789998229", "The Hunger Games");
-        books[18] = new Book(19, "6789998230", "Catching Fire");
-        books[19] = new Book(20, "6789998231", "Mockingjay");
+        books[0] = new Book(1, "6789998212", "The Odyssey");
+        books[1] = new Book(2, "6789998213", "The Great Gatsby");
+        books[2] = new Book(3, "6789998214", "To Kill a Mockingbird");
+        books[3] = new Book(4, "6789998215", "1984");
+        books[4] = new Book(5, "6789998216", "Pride and Prejudice");
+        books[5] = new Book(6, "6789998217", "The Catcher in the Rye");
+        books[6] = new Book(7, "6789998218", "Brave New World");
+        books[7] = new Book(8, "6789998219", "The Hobbit");
+        books[8] = new Book(9, "6789998220", "The Lord of the Rings");
+        books[9] = new Book(10, "6789998221", "Moby Dick");
+        books[10] = new Book(11, "6789998222", "Frankenstein");
+        books[11] = new Book(12, "6789998223", "Dracula");
+        books[12] = new Book(13, "6789998224", "Jane Eyre");
+        books[13] = new Book(14, "6789998225", "Wuthering Heights");
+        books[14] = new Book(15, "6789998226", "The Picture of Dorian Gray");
+        books[15] = new Book(16, "6789998227", "The Adventures of Huckleberry Finn");
+        books[16] = new Book(17, "6789998228", "The Adventures of Sherlock Holmes");
+        books[17] = new Book(18, "6789998229", "Les Misérables");
+        books[18] = new Book(19, "6789998230", "Anna Karenina");
+        books[19] = new Book(20, "6789998231", "War and Peace");
         bookCount = 20;
     }
 
