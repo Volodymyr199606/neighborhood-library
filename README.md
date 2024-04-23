@@ -15,7 +15,7 @@ In the image provided, you'll find the display for selecting option 1. It shows 
 
 Image below shows you that you can check out a book, by entering the ID number or if you want to go back to the home screen you need enter 0.
 
-![books3 image](images/books3.PNG)
+![books2 image](images/books2.PNG)
 
 In the provided screenshot, selecting Book 12 initiates a prompt for your name. Upon entering it correctly, a success message appears, and you're redirected to the home page.
 
@@ -27,6 +27,6 @@ Upon selecting option 2 from the main menu, you're presented with a list of chec
 
 Upon selecting option "C," you'll be asked to specify the book for return (book ID 12). Once you've done that correctly, a success message will appear, and you'll be returned to the main screen.
 
-![output image](images/output.PNG)
+![EnteringC image](images/EnteringC.PNG)
 
 The application appears to be designed for straightforward usage, as evidenced by the clear instructions and accompanying screenshots. Should you have any questions or feedback, please don't hesitate to reach out. Your satisfaction is important, and I'm here to assist you every step of the way!
