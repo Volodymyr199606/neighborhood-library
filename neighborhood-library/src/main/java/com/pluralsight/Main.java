@@ -28,7 +28,7 @@ public class Main {
 
         int choice;
         do {
-            System.out.println("\nHello and welcome to the local library in your neighborhood!");
+            System.out.println("\nHello and welcome to the local library in your neighborhood!\n");
             displayMainMenu();
             System.out.print("Enter your command here: ");
             choice = Integer.parseInt(scanner.nextLine());
